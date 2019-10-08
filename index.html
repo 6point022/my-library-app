@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="./style.css" type="text/css">
 </head>
 <body>
+	<h1>My Library App</h1>
+
 	<table>
 		<tr>
 			<th>Title</th>
@@ -22,6 +24,8 @@
 	<button id="removeBook" class="button">Remove selected books</button>
 
 	<form action="">
+		<input type="button" id="close" value="X" >
+
 		<div>
 			<label for="title">Enter title:</label>
 			<input type="text" id="title">
@@ -38,6 +42,7 @@
 		<input type="radio" name="readStatus" value="Not Read" checked>Not Read
 		<div class="button">
 			<button type="button" id="submit">Submit</button>
+			<button type="reset" id="reset">Reset</button>
 		</div>
 	</form>
 

@@ -45,16 +45,17 @@ const addBook = document.querySelector('#addBook');
 const removeBook = document.querySelector('#removeBook');
 const newBookForm = document.querySelector('form');
 const submitNewBook = document.querySelector('#submit')
+const closeFormButton = document.querySelector('#close')
 
 function readStatus() {
-	if(newBookForm[3].checked)
+	if(newBookForm[4].checked)
 		return 'Read';
 	else
 		return 'Not Read';
 }
 
 addBook.addEventListener('click', () => {
-	newBookForm.style.display = "block";
+	newBookForm.style.display = 'block';
 });
 
 removeBook.addEventListener('click', () => {
@@ -80,10 +81,13 @@ removeBook.addEventListener('click', () => {
 });
 
 submitNewBook.addEventListener('click', () => {
-	console.log(newBookForm[4].value);
+	// console.log(newBookForm[4].value);
 	
-	console.log(newBookForm[3].checked);
+	// console.log(newBookForm[3].checked);
 	
-	addBookToLibrary(newBookForm[0].value, newBookForm[1].value, newBookForm[2].value, readStatus());
+	addBookToLibrary(newBookForm[1].value, newBookForm[2].value, newBookForm[3].value, readStatus());
 });
 
+closeFormButton.addEventListener('click', () => {
+	newBookForm.style.display = 'none';
+})
